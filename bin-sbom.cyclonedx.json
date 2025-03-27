@@ -1,0 +1,351 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:52f953ef-a20c-423e-8548-fa4f79489823",
+  "version": 1,
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.2.2",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ],
+          "publisher": "OWASP Foundation",
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "11.2.2",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@11.2.2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary1"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary2"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary3"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libz.so.1",
+      "name": "libz.so.1",
+      "scope": "required",
+      "purl": "pkg:file/libz.so.1",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary3"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary5"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary6"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary6"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary7"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libc.so.6",
+      "name": "libc.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libc.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary8"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libgfortran.so.1",
+      "name": "libgfortran.so.1",
+      "purl": "pkg:file/libgfortran.so.1",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary8"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:file/libm.so.6",
+      "name": "libm.so.6",
+      "scope": "required",
+      "purl": "pkg:file/libm.so.6",
+      "properties": [
+        {
+          "name": "internal:srcFile",
+          "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary8"
+        }
+      ],
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "binary-analysis",
+              "confidence": 0.5,
+              "value": "/home/leha/Downloads/Telegram Desktop/gcc_binaries/binary8"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "services": [],
+  "dependencies": [
+    {
+      "ref": "pkg:generic/binary1",
+      "dependsOn": [
+        "pkg:file/libc.so.6"
+      ]
+    },
+    {
+      "ref": "pkg:file/libc.so.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/binary2",
+      "dependsOn": [
+        "pkg:file/libc.so.6"
+      ]
+    },
+    {
+      "ref": "pkg:generic/binary3",
+      "dependsOn": [
+        "pkg:file/libc.so.6",
+        "pkg:file/libz.so.1"
+      ]
+    },
+    {
+      "ref": "pkg:file/libz.so.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/binary5",
+      "dependsOn": [
+        "pkg:file/libc.so.6"
+      ]
+    },
+    {
+      "ref": "pkg:generic/binary6",
+      "dependsOn": [
+        "pkg:file/libc.so.6"
+      ]
+    },
+    {
+      "ref": "pkg:generic/binary7",
+      "dependsOn": [
+        "pkg:file/libc.so.6"
+      ]
+    },
+    {
+      "ref": "pkg:generic/binary8",
+      "dependsOn": [
+        "pkg:file/libc.so.6",
+        "pkg:file/libgfortran.so.1",
+        "pkg:file/libm.so.6"
+      ]
+    },
+    {
+      "ref": "pkg:file/libm.so.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:file/libgfortran.so.1",
+      "dependsOn": []
+    }
+  ]
+}

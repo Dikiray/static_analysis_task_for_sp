@@ -1,0 +1,971 @@
+INFO: SingleTargetIndirectCallsPass: Replaced single-target indirect call at instr_0x00401dbc_3 with direct call to fun_0x00533270.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018c0 @ instr_0x00401da5_2 with call to ext_fun___libc_start_main.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00533270 @ instr_0x00401dbc_3 with call to ext_fun___gmon_start__.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00402044_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401900 @ instr_0x00402086_2 with call to ext_fun___xstat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bb0 @ instr_0x004020ab_2 with call to ext_fun_unlink.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c20 @ instr_0x00402253_2 with call to ext_fun_exit.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040226b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004022bd_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x004023a5_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00402458_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402477_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00402487_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004024a7_0 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00402543_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00402558_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x004025dd_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040261b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040262a_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00402684_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00402696_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401900 @ instr_0x004026d4_2 with call to ext_fun___xstat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00402729_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x0040275b_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040279c_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004027b9_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004027c5_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x004027f4_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x004028a8_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x004028e2_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00402968_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00402988_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00402a29_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00402a63_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402a7d_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402a8f_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402aa8_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402b6a_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402b7e_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402ba9_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402bbb_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402bcc_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402be0_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402bf4_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00402c08_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401910 @ instr_0x00402c35_0 with call to ext_fun_putenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00402cd0_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401900 @ instr_0x00402cf8_2 with call to ext_fun___xstat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00402e22_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00402e3f_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00402e80_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00402eb4_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00402f44_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x00402ffc_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x00403125_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x0040337f_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x0040342a_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004034fb_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x004035a3_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004036ae_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x004036d9_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403802_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403827_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403842_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x004038ac_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00403a5a_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x00403a94_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x00403b60_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00403bc3_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00403d64_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00403da8_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403dd9_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403ded_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00403df7_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00403e26_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00403eab_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00403eda_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00403f70_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00403fb4_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403fe5_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00403ffa_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040400b_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040401f_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00404030_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00404044_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00404058_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040406c_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040407d_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401910 @ instr_0x00404139_0 with call to ext_fun_putenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x00404148_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040415c_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d20 @ instr_0x0040446b_2 with call to ext_fun_strverscmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040477e_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00404800_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004048bf_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00404922_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040493c_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019c0 @ instr_0x00404977_2 with call to ext_fun_strncpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x004049f7_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00404a19_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004051fd_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040520c_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040524b_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00405295_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x004052a8_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405300_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00405350_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x0040557f_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405609_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405825_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405841_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405864_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x004058d6_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x004058f7_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c20 @ instr_0x004058fe_2 with call to ext_fun_exit.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040590a_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x00405918_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x00405935_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x00405947_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x00405958_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x00405967_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040597f_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040598a_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c20 @ instr_0x00405991_2 with call to ext_fun_exit.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401910 @ instr_0x004059f8_2 with call to ext_fun_putenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00405b0b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019c0 @ instr_0x00405b44_2 with call to ext_fun_strncpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00405ba4_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019c0 @ instr_0x00405bdd_2 with call to ext_fun_strncpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00405c4c_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00405c6f_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00405cb5_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00405d2b_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00405d33_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x00405d51_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018a0 @ instr_0x00405d77_2 with call to ext_fun_execvp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00405d7c_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405f1e_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x00405f38_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00406454_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x004065fc_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x0040688f_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00406b46_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00406e27_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004074d0_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004074ef_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00407522_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040752d_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x0040764c_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x0040765b_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x00407666_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00407697_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x004076a2_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x004076d6_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x004076e5_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x004076f0_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00407710_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040771f_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040772c_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00407749_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x004077f3_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401900 @ instr_0x00407812_2 with call to ext_fun___xstat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018e0 @ instr_0x00407837_2 with call to ext_fun_read.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00407850_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004078cb_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00407de8_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00407df7_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00407e0e_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00407f40_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040817e_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018d0 @ instr_0x0040824e_2 with call to ext_fun_fork.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401af0 @ instr_0x0040825d_2 with call to ext_fun_sleep.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018d0 @ instr_0x0040826a_2 with call to ext_fun_fork.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c10 @ instr_0x00408282_2 with call to ext_fun_waitpid.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bb0 @ instr_0x004082e1_2 with call to ext_fun_unlink.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004082e9_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x00408350_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x00408368_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c70 @ instr_0x0040838b_2 with call to ext_fun___fxstat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c70 @ instr_0x004083aa_2 with call to ext_fun___fxstat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018e0 @ instr_0x00408400_2 with call to ext_fun_read.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018e0 @ instr_0x00408449_2 with call to ext_fun_read.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408466_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408471_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040847d_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x004084ae_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x004084ca_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x004084f0_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00408506_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00408514_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x0040852b_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x0040855d_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408568_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408598_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004085ce_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x004085e4_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x004085ef_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004085fb_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x00408621_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408639_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019d0 @ instr_0x00408641_2 with call to ext_fun_dup.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408649_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x00408661_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c20 @ instr_0x00408671_2 with call to ext_fun_exit.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00408691_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019d0 @ instr_0x00408698_2 with call to ext_fun_dup.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x0040869f_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b30 @ instr_0x004086be_2 with call to ext_fun_execv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018a0 @ instr_0x004086c8_2 with call to ext_fun_execvp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019e0 @ instr_0x004088bb_2 with call to ext_fun_fwrite.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00408995_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019e0 @ instr_0x00408a61_2 with call to ext_fun_fwrite.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bf0 @ instr_0x00408a72_2 with call to ext_fun_fputc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a50 @ instr_0x00408aa5_2 with call to ext_fun_fprintf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bf0 @ instr_0x00408acc_2 with call to ext_fun_fputc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cb0 @ instr_0x00408ad8_2 with call to ext_fun_fflush_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00408cfe_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x00408d73_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x00408db8_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x00408dca_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401be0 @ instr_0x00408ded_2 with call to ext_fun_strrchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a20 @ instr_0x00408e50_2 with call to ext_fun_strsignal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x00408e88_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x00408eb2_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00408ebf_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x00408edb_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x00408eed_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x004090ca_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x004094ce_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x004097f7_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040994c_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040a57b_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040acf2_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040b017_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040b0d8_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040b258_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040b3ba_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040ba1a_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x0040bb73_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040bb9b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d30 @ instr_0x0040bbb4_2 with call to ext_fun_strstr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040bbce_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040bc08_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040bc1e_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d30 @ instr_0x0040bc2b_2 with call to ext_fun_strstr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x0040bc3e_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040bcde_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bd37_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bd4b_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bd5a_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bd6e_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bd7d_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bd91_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bda0_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bdb4_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b50 @ instr_0x0040bdc6_2 with call to ext_fun_signal.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d10 @ instr_0x0040bde7_2 with call to ext_fun__obstack_begin.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d10 @ instr_0x0040be00_2 with call to ext_fun__obstack_begin.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040be14_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040be33_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040be58_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040bf1d_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040bf3c_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040bf61_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040c0a6_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040c0cf_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d10 @ instr_0x0040c196_2 with call to ext_fun__obstack_begin.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040c1e8_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040c211_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401910 @ instr_0x0040c28e_2 with call to ext_fun_putenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040c2bd_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040c364_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040c370_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x0040c391_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x0040c3a0_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040c3a8_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x0040c3c4_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040c47b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040c4a6_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040c9a1_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040ca8b_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040ca9f_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cab3_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cac7_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cadb_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040caef_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cb00_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cb1b_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cb31_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cd10_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a00 @ instr_0x0040cd24_2 with call to ext_fun__obstack_newchunk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040cffb_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040d067_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040d0b4_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040d0d0_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040d0e1_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040d106_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040d113_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040d138_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040d145_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040d1dd_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019c0 @ instr_0x0040d252_2 with call to ext_fun_strncpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x0040d265_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040d3de_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040d445_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d528_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d537_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d67b_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040d68c_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d6be_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d6d2_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040d6fb_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d72a_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d00 @ instr_0x0040d73b_2 with call to ext_fun___overflow.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040d7e4_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040d89d_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040da68_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040da75_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040da8d_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040da98_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dab0_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dabb_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dad3_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dade_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040daf6_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040db01_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040db25_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040db30_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040db48_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040db53_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040db6b_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040db76_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040db8e_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040db99_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dbb1_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dbbc_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dbd4_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dbdf_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dbf7_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dc02_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dc1a_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dc25_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dc3d_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dc48_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dc60_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dc6b_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dc83_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dc8e_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dca6_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dcb1_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dcc9_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dcd4_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dcec_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dcf7_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dd0f_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dd1a_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dd32_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dd3d_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dd55_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dd60_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dd78_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dd83_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dd9b_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dda6_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040ddbe_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040ddc9_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dde1_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040ddec_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040de04_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040de0f_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040de27_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040de32_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040de4a_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040de55_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040de6d_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040de78_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040de90_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040de9b_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040deb3_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040debe_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040ded6_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dee1_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040def9_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040df04_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040df1c_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040df27_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040df3f_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040df4a_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040df62_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040df6d_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040df85_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040df90_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dfa8_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b20 @ instr_0x0040dfb3_2 with call to ext_fun_fputs_unlocked.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dfcb_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040dfd8_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040dff9_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040e003_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040e014_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040e01e_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b00 @ instr_0x0040e02f_2 with call to ext_fun_printf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040e0b4_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040e0be_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040e0c8_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cc0 @ instr_0x0040e0d2_2 with call to ext_fun_puts.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040e369_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040e4cc_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040e51c_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040e695_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040e6c0_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040e6d9_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040e7a6_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040e7be_0 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040ea65_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040ea73_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x0040ea84_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401ad0 @ instr_0x0040edc8_2 with call to ext_fun_setlocale.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401ad0 @ instr_0x0040edd7_2 with call to ext_fun_setlocale.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c60 @ instr_0x0040ede6_2 with call to ext_fun_bindtextdomain.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b60 @ instr_0x0040edf0_2 with call to ext_fun_textdomain.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040ee01_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b90 @ instr_0x0040ee19_2 with call to ext_fun_dcgettext.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a80 @ instr_0x0040ee61_2 with call to ext_fun_nl_langinfo.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401890 @ instr_0x0040ee76_2 with call to ext_fun_strcasecmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401890 @ instr_0x0040ee9f_2 with call to ext_fun_strcasecmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0040eee5_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019c0 @ instr_0x0040efa6_2 with call to ext_fun_strncpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x0040efb9_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040efe2_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x0040f01c_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040f037_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0040f07a_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401990 @ instr_0x0040f08b_2 with call to ext_fun_strncmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b70 @ instr_0x0040f0c5_2 with call to ext_fun_strchr.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x0040f0fd_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040f1b2_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040f67c_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040f6a1_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040f6bb_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x0040f79c_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x0040f8d2_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x0040f934_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0040f951_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b80 @ instr_0x0040f991_2 with call to ext_fun_memset.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d60 @ instr_0x0040f996_2 with call to ext_fun___ctype_b_loc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x0040fa8f_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x0040faf5_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004120f9_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x00412163_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00412193_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b80 @ instr_0x004122df_2 with call to ext_fun_memset.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a90 @ instr_0x00412321_2 with call to ext_fun_abort.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x004126fd_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x0041271a_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d60 @ instr_0x0041272c_2 with call to ext_fun___ctype_b_loc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401930 @ instr_0x00412759_2 with call to ext_fun___ctype_tolower_loc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004127ac_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00412813_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a90 @ instr_0x00414050_2 with call to ext_fun_abort.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x004146de_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x004146f1_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x00414b0a_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x00414b1d_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415047_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x004150e6_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00415159_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004151b6_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004151c4_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0041530d_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415519_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415588_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00415599_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0041567b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x0041568c_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b40 @ instr_0x00415765_2 with call to ext_fun___fsetlocking.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b40 @ instr_0x0041577b_2 with call to ext_fun___fsetlocking.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b40 @ instr_0x00415795_0 with call to ext_fun___fsetlocking.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004157c4_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004157df_0 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x00415814_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00415825_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x0041589f_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00415a19_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00415a7f_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a70 @ instr_0x00415aea_2 with call to ext_fun_strcmp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415b1b_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415b60_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x00415b74_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x00415ba0_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415bb5_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x00415c00_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415c30_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415c44_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415c5f_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019c0 @ instr_0x00415ca5_2 with call to ext_fun_strncpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d70 @ instr_0x00415cc9_2 with call to ext_fun_strcat.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415cda_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415d9a_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415daf_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415dc1_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415dd6_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415de8_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415dfd_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415e10_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00415e28_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415e56_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415e6f_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415e88_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c40 @ instr_0x00415ea5_2 with call to ext_fun_access.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415ebf_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415ec9_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401970 @ instr_0x00415ed8_2 with call to ext_fun_getenv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415f27_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00415f35_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00415f50_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a40 @ instr_0x00415f71_2 with call to ext_fun_strcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00415f88_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a90 @ instr_0x00415fb2_2 with call to ext_fun_abort.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004160f8_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00416106_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00416114_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019f0 @ instr_0x00416122_2 with call to ext_fun_fclose.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401940 @ instr_0x0041613e_2 with call to ext_fun_remove.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0041614f_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0041615e_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x00416178_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0041618a_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x004161fe_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b80 @ instr_0x00416235_2 with call to ext_fun_memset.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00416297_2 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b80 @ instr_0x004162c9_2 with call to ext_fun_memset.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0041657c_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416605_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x004166c3_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401cd0 @ instr_0x0041675e_2 with call to ext_fun_free.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x0041677f_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x004167d0_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x004167da_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x004167f9_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416870_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004019a0 @ instr_0x004169ed_2 with call to ext_fun_wait4.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018f0 @ instr_0x00416a4b_2 with call to ext_fun_kill.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c10 @ instr_0x00416a5c_2 with call to ext_fun_waitpid.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416a65_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00416ac8_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416ad8_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416aec_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00416af4_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416b04_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416b18_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00416b20_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416b30_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416b44_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00416b54_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416b6f_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401920 @ instr_0x00416b83_2 with call to ext_fun_write.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401ac0 @ instr_0x00416b8d_2 with call to ext_fun__exit.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401af0 @ instr_0x00416be4_2 with call to ext_fun_sleep.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401ab0 @ instr_0x00416c06_2 with call to ext_fun_vfork.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bd0 @ instr_0x00416c3e_2 with call to ext_fun_dup2.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416c4f_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bd0 @ instr_0x00416c6c_2 with call to ext_fun_dup2.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416c7d_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416c96_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x004018a0 @ instr_0x00416cc3_2 with call to ext_fun_execvp.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416cc8_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416cf6_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416d0a_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416d20_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416d4b_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416d54_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bd0 @ instr_0x00416d7d_2 with call to ext_fun_dup2.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c80 @ instr_0x00416d8a_2 with call to ext_fun_close.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416d97_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bd0 @ instr_0x00416dbc_2 with call to ext_fun_dup2.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416dc9_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b30 @ instr_0x00416dee_2 with call to ext_fun_execv.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c90 @ instr_0x00416df3_2 with call to ext_fun___errno_location.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x00416e1f_0 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d40 @ instr_0x00416e72_2 with call to ext_fun_sbrk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d40 @ instr_0x00416ea0_2 with call to ext_fun_sbrk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a50 @ instr_0x00416edb_2 with call to ext_fun_fprintf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d40 @ instr_0x00416ef2_2 with call to ext_fun_sbrk.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401aa0 @ instr_0x00416f28_2 with call to ext_fun_realloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x00416f37_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c30 @ instr_0x00416f84_2 with call to ext_fun_calloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401980 @ instr_0x00416fc3_2 with call to ext_fun_malloc.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00417018_0 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x00417031_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a60 @ instr_0x00417059_0 with call to ext_fun_memcpy.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401ba0 @ instr_0x00417063_2 with call to ext_fun_strerror.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c50 @ instr_0x0041707c_2 with call to ext_fun_sprintf.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a10 @ instr_0x004170b7_2 with call to ext_fun_strlen.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401ce0 @ instr_0x0041711f_2 with call to ext_fun_gettimeofday.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401bc0 @ instr_0x00417132_2 with call to ext_fun_getpid.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401b10 @ instr_0x00417297_2 with call to ext_fun_open.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401d50 @ instr_0x0041731e_2 with call to ext_fun_realpath.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401a30 @ instr_0x0041732d_2 with call to ext_fun___strdup.
+INFO: ReplaceCallsToExtFnsPass: Replaced call fun_0x00401c20 @ instr_0x00417353_2 with call to ext_fun_exit.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533208.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533040.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533090.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533238.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b10.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331b0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533158.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004018e0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b30.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533138.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533038.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d20.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d60.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533128.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330b8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331d8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533268.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330a0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c50.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330e0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330e8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a00.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533058.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533070.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533190.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533260.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533048.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331f8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004019b0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533160.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533200.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533168.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533068.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330f8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533120.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533008.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004019e0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533230.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c70.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a80.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533000.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331b8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b40.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533270.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330a8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533150.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331e8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533060.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331e0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330c8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533218.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533170.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b60.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401ad0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533130.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331d0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a70.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533020.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401980.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533018.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533228.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533078.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533028.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004018d0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401ab0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004018f0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330d0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533110.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d30.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533010.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401bf0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401bd0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a40.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330d8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533140.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533080.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d40.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401890.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533030.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c40.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330f0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331a8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533188.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533178.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401940.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c30.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401cd0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d70.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d00.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004019d0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401af0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a10.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533248.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401cb0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a60.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533180.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401ac0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401ba0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533098.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d10.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533220.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533210.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331f0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401bb0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401900.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533198.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533118.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401ce0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004018a0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401be0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b80.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401970.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a20.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533258.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331a0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401930.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401910.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401cc0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401d50.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004019a0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b00.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c60.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a90.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004019c0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533100.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b90.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a30.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533250.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c10.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004019f0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b20.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c90.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c20.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533050.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401bc0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b70.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533088.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331c0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401b50.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330b0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533108.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005330c0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401920.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401aa0.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533240.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401c80.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x005331c8.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00533148.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401a50.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x00401990.
+INFO: ReplaceCallsToExtFnsPass: Removed stub fun_0x004018c0.
+INFO: InliningPass: Block 'blk_0x004122a0_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x004122e4_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412303_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412309_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412310_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412317_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412321_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412321_3_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412326_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x0041232f_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x004123e5_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: InliningPass: Block 'blk_0x00412609_fun_0x004126a0' inlined into function 'fun_0x004126a0'.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00402253_2 from Some(Tid { id: "blk_0x00402253_3", address: TidAddress(Some(4203091)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x004058fe_2 from Some(Tid { id: "blk_0x004058fe_3", address: TidAddress(Some(4217086)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00405991_2 from Some(Tid { id: "blk_0x00405991_3", address: TidAddress(Some(4217233)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00408671_2 from Some(Tid { id: "blk_0x00408671_3", address: TidAddress(Some(4228721)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00412321_2 from Some(Tid { id: "blk_0x00412321_3", address: TidAddress(Some(4268833)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00412321_2_fun_0x004126a0 from Some(Tid { id: "blk_0x00412321_3_fun_0x004126a0", address: TidAddress(Some(4268833)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00414050_2 from Some(Tid { id: "blk_0x00414050_3", address: TidAddress(Some(4276304)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00415fb2_2 from Some(Tid { id: "blk_0x00415fb2_3", address: TidAddress(Some(4284338)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00416b8d_2 from Some(Tid { id: "blk_0x00416b8d_3", address: TidAddress(Some(4287373)) }) with artificial return target.
+INFO: NoreturnExtFunctionsPass: Change return target of nonret call @ instr_0x00417353_2 from Some(Tid { id: "blk_0x00417353_3", address: TidAddress(Some(4289363)) }) with artificial return target.
+INFO: EntryPointsPass: Entry point fun_0x00401cd0 undefined or empty.
+INFO: EntryPointsPass: Entry point fun_0x00532080 undefined or empty.
+INFO: EntryPointsPass: Entry point fun_0x00532088 undefined or empty.
+INFO: EntryPointsPass: Entry point fun_0x00532090 undefined or empty.
+INFO: EntryPointsPass: Entry point fun_0x00532098 undefined or empty.
+ERROR: CallingConvention: MSABI: callee_saved_register: Varnode 'Ram[0x00000000]:8' cannot be converted to an IR variable.
+ERROR: CallingConvention: syscall: callee_saved_register: Varnode 'Ram[0x00000000]:8' cannot be converted to an IR variable.
+INFO: instr_0x00401d8a_2: Unexpected alignment
+INFO: Function Signature Analysis @ fun_0x00412830: Unexpected stack parameter size
+INFO: Function Signature Analysis @ fun_0x00414ce0: Unexpected stack parameter size
+INFO: CWE676: Program imports the following dangerous symbols: ext_fun_realpath(realpath),ext_fun_strcat(strcat),ext_fun_strlen(strlen),ext_fun_strncpy(strncpy),ext_fun_memset(memset),ext_fun_memcpy(memcpy),ext_fun_strcpy(strcpy),ext_fun_sprintf(sprintf),
+INFO: Pointer Inference: Fixpoint did not stabilize. Remaining worklist size: 2
+[CWE125] (0.3) (Out-of-bounds Read) Memory read at 4279857 may be out of bounds
+[CWE125] (0.3) (Out-of-bounds Read) Memory read at 4282615 may be out of bounds
+[CWE190] (0.1) (Integer Overflow or Wraparound) Potential overflow due to multiplication before call to realloc at 4277982
+[CWE190] (0.1) (Integer Overflow or Wraparound) Potential overflow due to multiplication before call to realloc at 4278001
+[CWE190] (0.1) (Integer Overflow or Wraparound) Potential overflow due to multiplication before call to malloc at 4279050
+[CWE190] (0.1) (Integer Overflow or Wraparound) Potential overflow due to multiplication before call to malloc at 4279069
+[CWE190] (0.1) (Integer Overflow or Wraparound) Potential overflow due to multiplication before call to malloc at 4280550
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287343 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287300 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287280 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287256 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287236 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287212 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4287192 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4229836 (fputc).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4229746 (fputc).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4229746 (fputc).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4229746 (fputc).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4229746 (fputc).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228760 (dup).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228673 (dup).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228395 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228372 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228372 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228336 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228298 (write).
+[CWE252] (0.1) (Unchecked Return Value) There is no check of the return value of 4228298 (write).
+[CWE415] (0.3) (Double Free) Object may have been freed before at 4258002
+[CWE415] (0.3) (Double Free) Object may have been freed before at 4258447
+[CWE415] (0.3) (Double Free) Object may have been freed before at 4282308
+[CWE415] (0.3) (Double Free) Object may have been freed before at 4284678
+[CWE416] (0.3) (Use After Free) Access through a dangling pointer at 4211562
+[CWE416] (0.3) (Use After Free) Access through a dangling pointer at 4258357
+[CWE416] (0.3) (Use After Free) Access through a dangling pointer at 4258565
+[CWE416] (0.3) (Use After Free) Access through a dangling pointer at 4271289
+[CWE416] (0.3) (Use After Free) Access through a dangling pointer at 4271328
+[CWE416] (0.3) (Use After Free) Call at 4284517 may access dangling pointers through its parameters
+[CWE416] (0.3) (Use After Free) Call to memcpy at 4285079 may access dangling pointers through its parameters
+[CWE476] (0.3) (NULL Pointer Dereference) There is no check if the return value is NULL at 4282388 (malloc).
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402260 (4203115) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402260 (4203197) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402370 (4203429) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004023d0 (4203608) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004023d0 (4203655) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004024b0 (4203843) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004025f0 (4204059) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004025f0 (4204074) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004025f0 (4204164) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004025f0 (4204182) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204444) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204473) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204485) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204532) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204712) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204770) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204904) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4204936) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4205097) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402770 (4205155) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00402e70 (4206208) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004034a0 (4207867) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004034a0 (4208302) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004034a0 (4208345) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403850 (4209242) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403ca0 (4210020) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403ca0 (4210167) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403ca0 (4210214) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403ca0 (4210347) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403ca0 (4210394) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00403ca0 (4210544) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00404720 (4212606) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4212927) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4213052) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4213111) -> strncpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4215293) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4215308) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4215445) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4215632) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4217611) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4217668) -> strncpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4217764) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4217821) -> strncpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4217932) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4217967) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4218037) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4218155) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4218163) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4218193) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4219988) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4221766) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004047e0 (4222503) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224208) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224239) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224290) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224301) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224588) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224603) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224614) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224663) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224674) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224726) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224741) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224752) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224812) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004074b0 (4224841) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00408030 (4227454) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00408030 (4228358) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040ac80 (4238578) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bb40 (4242331) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bb40 (4242382) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bb40 (4242440) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bb40 (4242462) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bb40 (4242494) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4242654) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4242964) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4242995) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4243229) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4243260) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4243622) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4243663) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4243944) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4243985) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244157) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244324) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244336) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244369) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244384) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244392) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244603) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4244646) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4245921) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4248029) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4248146) -> strncpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4249757) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040bcc0 (4252521) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040e570 (4253333) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040e570 (4253376) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040e800 (4254309) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040e800 (4254323) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040eeb0 (4255461) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040ef10 (4255654) -> strncpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040f060 (4255866) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_0040f760 (4258193) -> memset
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004122a0 (4268767) -> memset
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004126b0 (4269996) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415010 (4280391) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004151c0 (4280772) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004152b0 (4281101) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004154b0 (4281625) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004154b0 (4281736) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004154b0 (4281753) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415610 (4281979) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415610 (4281996) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004157f0 (4282405) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283163) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283232) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283296) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283317) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283392) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283460) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283487) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283557) -> strncpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415980 (4283593) -> strcat
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415d60 (4283920) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415d60 (4283944) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415ef0 (4284199) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415ef0 (4284213) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415ef0 (4284240) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00415ef0 (4284273) -> strcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004161c0 (4284926) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_004161c0 (4284981) -> memset
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416260 (4285079) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416260 (4285129) -> memset
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416390 (4286335) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416aa0 (4287176) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416aa0 (4287220) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416aa0 (4287264) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416aa0 (4287316) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00416fe0 (4288536) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00417020 (4288561) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00417020 (4288601) -> memcpy
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00417060 (4288636) -> sprintf
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00417090 (4288695) -> strlen
+[CWE676] (0.1) (Use of Potentially Dangerous Function) FUN_00417310 (4289310) -> realpath
+[CWE789] (0.1) (Large memory allocation) Potential stack memory exhaustion at 0x4228971
+[CWE789] (0.1) (Large memory allocation) Potential heap memory exhaustion at 0x4282527
+[CWE476] (0.2) (NULL Pointer Dereference) Memory access at 4203836 may result in a NULL dereference
