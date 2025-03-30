@@ -5,6 +5,7 @@ import requests
 import argparse
 import time
 from uuid import uuid4
+from pprint import pprint
 from packageurl import PackageURL
 from collections import defaultdict
 
@@ -80,6 +81,52 @@ def parse_makefile_def(file_path):
                     dependencies[module].append(dep)
     return dict(dependencies)
 
+def try_to_find_version(directory, package_name):
+    version_patterns = [
+        # Для файлов с "VER" в названии (как в примере)
+        (r"\b\d+\.\d+\.\d+\b", lambda f: "VER" in f),
+        # Для .h файлов: #define *VERSION <version>
+        (r"#define\s+\w*VERSION\s+([^\s]+)", [f"{package_name}.h"]),
+    ]
+
+    raw_found_versions = set()
+
+    for pattern, files_or_condition in version_patterns:
+        if callable(files_or_condition):
+            # Если условие - функция, проверяем все файлы, удовлетворяющие условию
+            for root, _, files in os.walk(directory):
+                for file in files:
+                    if files_or_condition(file):
+                        filepath = os.path.join(root, file)
+                        try:
+                            with open(filepath, 'r', encoding='utf-8') as f:
+                                content = f.read()
+                            matches = re.findall(pattern, content)
+                            if matches:
+                                raw_found_versions.update(matches)
+                        except (IOError, UnicodeDecodeError):
+                            continue
+        else:
+            # Иначе проверяем конкретные файлы
+            for filename in files_or_condition:
+                filepath = os.path.join(directory, filename)
+                if os.path.isfile(filepath):
+                    try:
+                        with open(filepath, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                        matches = re.findall(pattern, content)
+                        if matches:
+                            raw_found_versions.update(matches)
+                    except (IOError, UnicodeDecodeError):
+                        continue
+    found_versions = list()
+    for i in raw_found_versions:
+        found_versions.append(i.replace("\"", ""))
+    # Если нашли несколько версий, возвращаем самую длинную (наиболее вероятно полную)
+    if found_versions:
+        return found_versions[0]
+    else:
+        return ""
 
 def add_dependencies(comp_refs, bom, root_dir):
     """
@@ -92,11 +139,13 @@ def add_dependencies(comp_refs, bom, root_dir):
     """
     dep_dict = parse_makefile_def(root_dir + "/Makefile.def")
     for comp_name in dep_dict:
-        if comp_name in comp_refs.keys():
-            component = comp_refs[comp_name]
+        if comp_name in comp_refs.keys() or comp_name == "libcpp":
+            component = comp_refs["cpplib" if comp_name == "libcpp" else  comp_name]
             component_lst = []
             for dep_name in dep_dict[comp_name]:
-                if dep_name in comp_refs.keys():
+                if dep_name == "libcpp":
+                    bom.register_dependency(comp_refs["cpplib"], [component])
+                elif dep_name in comp_refs.keys():
                     bom.register_dependency(comp_refs[dep_name], [component])
 
 def send_nvd_request(vendor, package_name, version):
@@ -111,7 +160,7 @@ def send_nvd_request(vendor, package_name, version):
     Returns:
         list: List of dictionaries containing CVE details, or None if no CVEs found
     """
-    time.sleep(10)  # Rate limiting
+    time.sleep(10)
     cves = []
     url = "https://services.nvd.nist.gov/rest/json/cves/2.0"
     params = {
@@ -166,100 +215,6 @@ def search_nvd(package_name, version):
             return cves
     return []
 
-
-def is_utility_by_content(file_path):
-    """
-    Check if a file is a utility script by examining its first line for shebang.
-
-    Args:
-        file_path (str): Path to the file
-
-    Returns:
-        bool: True if file starts with shebang, False otherwise
-    """
-    try:
-        with open(file_path, 'r') as file:
-            first_line = file.readline()
-            return first_line.startswith('#!')
-    except Exception:
-        return False
-
-
-def is_executable(file_path):
-    """
-    Check if a file is executable.
-
-    Args:
-        file_path (str): Path to the file
-
-    Returns:
-        bool: True if file is executable, False otherwise
-    """
-    return os.access(file_path, os.X_OK)
-
-
-def is_utility_by_extension(file_path):
-    """
-    Check if a file is a utility script by its extension.
-
-    Args:
-        file_path (str): Path to the file
-
-    Returns:
-        bool: True if file has a known script extension, False otherwise
-    """
-    utility_extensions = {'.sh', '.bat', '.cmd', '.pl', '.rb'}
-    _, ext = os.path.splitext(file_path)
-    return ext.lower() in utility_extensions
-
-
-def is_utility(file_path):
-    """
-    Determine if a file is a utility script by either extension or content.
-
-    Args:
-        file_path (str): Path to the file
-
-    Returns:
-        bool: True if file is a utility script, False otherwise
-    """
-    return (is_utility_by_extension(file_path) or
-            is_utility_by_content(file_path))
-
-
-def add_gcc_to_bom(bom):
-    """
-    Add GCC component to the BOM with its vulnerabilities.
-
-    Args:
-        bom (Bom): The Bill of Materials object
-
-    Returns:
-        Component: The created GCC component
-    """
-    bom_ref = str(uuid4())
-    component = Component(
-        type=ComponentType.APPLICATION,
-        name="gcc",
-        version="4.1.1",
-        bom_ref=bom_ref
-    )
-    bom.components.add(component)
-    cves = search_nvd("gcc", "4.1.1")
-    for vuln in cves:
-        rating = []
-        for scr in vuln["SCORES"]:
-            rating.append(VulnerabilityRating(score=scr[1], method=scr[0]))
-        vulnerability = Vulnerability(
-            bom_ref=bom_ref,
-            id=vuln["CVE_ID"],
-            source=vuln["URL"],
-            ratings=set(rating)
-        )
-        bom.vulnerabilities.add(vulnerability)
-    return component
-
-
 def add_library_to_bom(bom, package_name, name_from_path, ver_parsed):
     """
     Add a library component to the BOM with its vulnerabilities.
@@ -277,16 +232,15 @@ def add_library_to_bom(bom, package_name, name_from_path, ver_parsed):
     component = Component(
         type=ComponentType.LIBRARY,
         name=package_name if package_name not in ("", 'package-unused') else name_from_path,
-        version=ver_parsed if ver_parsed not in (' ', "version-unused") else "not_found",
+        version=ver_parsed if ver_parsed not in (' ', "version-unused") else "",
         bom_ref=bom_ref
     )
     bom.components.add(component)
 
     if "GNU" in package_name:
         package_name = name_from_path
-    if package_name == "package-unused":
+    if package_name == "" or package_name == "package-unused" :
         package_name = name_from_path
-
     cves = search_nvd(package_name, ver_parsed)
     for vuln in cves:
         rating = []
@@ -300,41 +254,6 @@ def add_library_to_bom(bom, package_name, name_from_path, ver_parsed):
         )
         bom.vulnerabilities.add(vulnerability)
     return component
-
-
-def add_forbidden_to_bom(bom, comp_refs, libraries_pathes):
-    """
-    Add forbidden libraries to the BOM with their vulnerabilities.
-
-    Args:
-        bom (Bom): The Bill of Materials object
-        comp_refs (dict): Dictionary to store component references
-        libraries_pathes (set): Set to store library paths
-    """
-    component = add_library_to_bom(bom, "libiberty", "", "not_found")
-    comp_refs["libiberty"] = component
-    libraries_pathes.add("libiberty")
-
-    component = add_library_to_bom(bom, "libintl", "", "0.12.1")
-    comp_refs["intl"] = component
-    libraries_pathes.add("intl")
-
-    component = add_library_to_bom(bom, "zlib", "", "1.2.3")
-    comp_refs["zlib"] = component
-    libraries_pathes.add("zlib")
-
-    component = add_library_to_bom(bom, "boehm-gc", "", "not_found")
-    comp_refs["boehm-gc"] = component
-    libraries_pathes.add("boehm-gc")
-
-    component = add_library_to_bom(bom, "fastjar", "", "0.90")
-    comp_refs["fastjar"] = component
-    libraries_pathes.add("fastjar")
-
-    component = add_gcc_to_bom(bom)
-    comp_refs["gcc"] = component
-    libraries_pathes.add("gcc")
-
 
 def scan_directory(path):
     """
@@ -354,70 +273,47 @@ def scan_directory(path):
         print(f"Path {path} does not exist.")
         return
 
-    executables = list()
     libraries_pathes = set()
     comp_refs = dict()
+    pathes_to_components = dict()
 
     for root, dirs, files in os.walk(path):
-        for file_name in files:
-            file_path = os.path.join(root, file_name)
+        if "configure" in files:
+            file_path = os.path.join(root, "configure")
             try:
                 flag = False
                 name = str()
                 tar_name = str()
 
-                if is_utility(file_path):
-                    executables.append(file_path)
-
                 with open(file_path, 'r', encoding='utf-8') as file:
                     for line_number, line in enumerate(file, start=1):
-                        if "PACKAGE_NAME='" in line:
+
+                        if "PACKAGE_NAME=" in line:
                             flag = True
-                            package_name = line.strip().split("'")[1]
-                        if "PACKAGE_TARNAME='" in line:
-                            tar_name = line.strip().split("'")[1]
-                        if "PACKAGE_VERSION='" in line:
-                            ver_parsed = line.strip().split("'")[1]
+                            package_name = line.strip().replace("'", "").split("=")[-1]
+
+                        if "PACKAGE_TARNAME=" in line:
+                            tar_name = line.strip().replace("'", "").split("=")[-1]
+
+                        if "PACKAGE_VERSION=" in line:
+                            ver_parsed = line.strip().replace("'", "").split("=")[-1]
+
                             if flag:
                                 name_from_path = file_path.split('/')[2]
-                                if "x86_64-unknown-linux-gnu" not in name_from_path:
-                                    if name_from_path == "libgfortran":
-                                        ver_parsed = "4." + ver_parsed[2:]
-                                    component = add_library_to_bom(
-                                        bom, package_name, name_from_path, ver_parsed
-                                    )
-                                    if tar_name and package_name != "package-unused" and tar_name != "cpplib":
-                                        comp_refs[tar_name] = component
-                                    else:
-                                        comp_refs[name_from_path] = component
-                                    libraries_pathes.add(name_from_path)
+                                if not ver_parsed:
+                                    ver_parsed = try_to_find_version(root, name_from_path)
+                                component = add_library_to_bom(
+                                    bom, package_name, name_from_path, ver_parsed
+                                )
+                                pathes_to_components[component.name] = root
+                                if tar_name and package_name != "package-unused":
+                                    comp_refs[tar_name] = component
+                                else:
+                                    comp_refs[name_from_path] = component
             except (UnicodeDecodeError, PermissionError):
                 continue
-
-    add_forbidden_to_bom(bom, comp_refs, libraries_pathes)
     add_dependencies(comp_refs, bom, path)
-
-    for i in executables:
-        if (i.split('/')[2] not in libraries_pathes) and ("x86_64-unknown-linux-gnu" not in i):
-            ver_parsed = str()
-            package_name = i.split('/')[-1]
-            try:
-                with open(i, 'r', encoding='utf-8') as file:
-                    for line_number, line in enumerate(file, start=1):
-                        if "scriptversion" in line:
-                            ver_parsed = line.strip().split('=')[1]
-                            break
-            except (UnicodeDecodeError, PermissionError):
-                pass
-
-            component = Component(
-                type=ComponentType.FILE,
-                name=package_name,
-                version=ver_parsed,
-                mime_type="executable"
-            )
-            bom.components.add(component)
-
+    #pprint(pathes_to_components)
     my_json_outputter = JsonV1Dot5(bom)
     serialized_json = my_json_outputter.output_as_string(indent=2)
     print(serialized_json)
@@ -428,7 +324,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate a cyclonedx sbom file for gcc 4.1.1 based on its source code"
     )
-    parser.add_argument("--dir", required=True,
+    parser.add_argument("-i", required=True,
                             help="Root directory of the project.")
     args = parser.parse_args()
-    components = scan_directory(args.dir)
+    components = scan_directory(args.i)
