@@ -171,7 +171,7 @@ def send_nvd_request(vendor, package_name, version):
     Returns:
         list: List of dictionaries containing CVE details, or None if no CVEs found
     """
-    time.sleep(10)
+    time.sleep(10)  # Rate limiting to avoid overwhelming the NVD API
     cves = []
     url = "https://services.nvd.nist.gov/rest/json/cves/2.0"
     params = {
@@ -317,7 +317,7 @@ def scan_directory(path):
                             ver_parsed = line.strip().replace("'", "").split("=")[-1]
 
                             if flag:
-                                name_from_path = file_path.split('/')[2]
+                                name_from_path = file_path.split('/')[-2]
                                 if not ver_parsed:
                                     ver_parsed = try_to_find_version(root, name_from_path)
                                 component = add_library_to_bom(
