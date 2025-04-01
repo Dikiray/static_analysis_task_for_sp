@@ -21,7 +21,11 @@ from cyclonedx.output.json import JsonV1Dot5
 from cyclonedx.schema import OutputFormat, SchemaVersion
 from cyclonedx.validation import make_schemabased_validator
 from cyclonedx.validation.json import JsonStrictValidator
-from cyclonedx.model.vulnerability import Vulnerability, VulnerabilityRating, VulnerabilityScoreSource
+from cyclonedx.model.vulnerability import (
+    Vulnerability,
+    VulnerabilityRating,
+    VulnerabilityScoreSource
+)
 
 
 def parse_module(mod_str, module_names):
@@ -59,7 +63,6 @@ def parse_makefile_def(file_path):
 
     with open(file_path, 'r') as f:
         content = f.read()
-        # Extract module names
         for match in re.finditer(
             r'(?:host_modules|target_modules)\s*=\s*{\s*module\s*=\s*([^;]+)',
             content
@@ -67,7 +70,6 @@ def parse_makefile_def(file_path):
             module = match.group(1).strip()
             module_names.add(module)
 
-        # Extract dependencies
         for match in re.finditer(
             r'dependencies\s*=\s*{\s*module\s*=\s*([^;]+);\s*on\s*=\s*([^;]+);',
             content
@@ -81,11 +83,20 @@ def parse_makefile_def(file_path):
                     dependencies[module].append(dep)
     return dict(dependencies)
 
+
 def try_to_find_version(directory, package_name):
+    """
+    Attempt to find the version of a package by searching through files in a directory.
+
+    Args:
+        directory (str): Directory path to search for version information
+        package_name (str): Name of the package to find version for
+
+    Returns:
+        str: Found version string, or empty string if not found
+    """
     version_patterns = [
-        # Для файлов с "VER" в названии (как в примере)
         (r"\b\d+\.\d+\.\d+\b", lambda f: "VER" in f),
-        # Для .h файлов: #define *VERSION <version>
         (r"#define\s+\w*VERSION\s+([^\s]+)", [f"{package_name}.h"]),
     ]
 
@@ -93,7 +104,6 @@ def try_to_find_version(directory, package_name):
 
     for pattern, files_or_condition in version_patterns:
         if callable(files_or_condition):
-            # Если условие - функция, проверяем все файлы, удовлетворяющие условию
             for root, _, files in os.walk(directory):
                 for file in files:
                     if files_or_condition(file):
@@ -107,7 +117,6 @@ def try_to_find_version(directory, package_name):
                         except (IOError, UnicodeDecodeError):
                             continue
         else:
-            # Иначе проверяем конкретные файлы
             for filename in files_or_condition:
                 filepath = os.path.join(directory, filename)
                 if os.path.isfile(filepath):
@@ -119,14 +128,16 @@ def try_to_find_version(directory, package_name):
                             raw_found_versions.update(matches)
                     except (IOError, UnicodeDecodeError):
                         continue
-    found_versions = list()
-    for i in raw_found_versions:
-        found_versions.append(i.replace("\"", ""))
-    # Если нашли несколько версий, возвращаем самую длинную (наиболее вероятно полную)
+
+    found_versions = []
+    for version in raw_found_versions:
+        found_versions.append(version.replace("\"", ""))
+
     if found_versions:
         return found_versions[0]
     else:
         return ""
+
 
 def add_dependencies(comp_refs, bom, root_dir):
     """
@@ -140,13 +151,13 @@ def add_dependencies(comp_refs, bom, root_dir):
     dep_dict = parse_makefile_def(root_dir + "/Makefile.def")
     for comp_name in dep_dict:
         if comp_name in comp_refs.keys() or comp_name == "libcpp":
-            component = comp_refs["cpplib" if comp_name == "libcpp" else  comp_name]
-            component_lst = []
+            component = comp_refs["cpplib" if comp_name == "libcpp" else comp_name]
             for dep_name in dep_dict[comp_name]:
                 if dep_name == "libcpp":
                     bom.register_dependency(comp_refs["cpplib"], [component])
                 elif dep_name in comp_refs.keys():
                     bom.register_dependency(comp_refs[dep_name], [component])
+
 
 def send_nvd_request(vendor, package_name, version):
     """
@@ -178,8 +189,10 @@ def send_nvd_request(vendor, package_name, version):
             cve_url = f"https://nvd.nist.gov/vuln/detail/{cve_id}"
 
             metrics = cve_info.get("metrics", {})
-            cvss_v2 = metrics.get("cvssMetricV2", [{}])[0].get("cvssData", {}).get("baseScore")
-            cvss_v3 = metrics.get("cvssMetricV30", [{}])[0].get("cvssData", {}).get("baseScore")
+            cvss_v2 = metrics.get("cvssMetricV2", [{}])[0].get(
+                "cvssData", {}).get("baseScore")
+            cvss_v3 = metrics.get("cvssMetricV30", [{}])[0].get(
+                "cvssData", {}).get("baseScore")
 
             if cve_id:
                 cves.append({
@@ -215,6 +228,7 @@ def search_nvd(package_name, version):
             return cves
     return []
 
+
 def add_library_to_bom(bom, package_name, name_from_path, ver_parsed):
     """
     Add a library component to the BOM with its vulnerabilities.
@@ -235,25 +249,31 @@ def add_library_to_bom(bom, package_name, name_from_path, ver_parsed):
         version=ver_parsed if ver_parsed not in (' ', "version-unused") else "",
         bom_ref=bom_ref
     )
-    bom.components.add(component)
+    return component
 
-    if "GNU" in package_name:
-        package_name = name_from_path
-    if package_name == "" or package_name == "package-unused" :
-        package_name = name_from_path
-    cves = search_nvd(package_name, ver_parsed)
+
+def add_vulnerabilites(bom, package_name, component):
+    """
+    Add vulnerabilities to a component in the BOM by searching NVD database.
+
+    Args:
+        bom (Bom): The Bill of Materials object
+        package_name (str): Name of the package to search vulnerabilities for
+        component (Component): The component to add vulnerabilities to
+    """
+    cves = search_nvd(package_name, component.version)
     for vuln in cves:
         rating = []
         for scr in vuln["SCORES"]:
             rating.append(VulnerabilityRating(score=scr[1], method=scr[0]))
         vulnerability = Vulnerability(
-            bom_ref=bom_ref,
+            bom_ref=component.bom_ref,
             id=vuln["CVE_ID"],
             source=vuln["URL"],
             ratings=set(rating)
         )
         bom.vulnerabilities.add(vulnerability)
-    return component
+
 
 def scan_directory(path):
     """
@@ -273,7 +293,6 @@ def scan_directory(path):
         print(f"Path {path} does not exist.")
         return
 
-    libraries_pathes = set()
     comp_refs = dict()
     pathes_to_components = dict()
 
@@ -287,7 +306,6 @@ def scan_directory(path):
 
                 with open(file_path, 'r', encoding='utf-8') as file:
                     for line_number, line in enumerate(file, start=1):
-
                         if "PACKAGE_NAME=" in line:
                             flag = True
                             package_name = line.strip().replace("'", "").split("=")[-1]
@@ -305,15 +323,35 @@ def scan_directory(path):
                                 component = add_library_to_bom(
                                     bom, package_name, name_from_path, ver_parsed
                                 )
-                                pathes_to_components[component.name] = root
                                 if tar_name and package_name != "package-unused":
                                     comp_refs[tar_name] = component
+                                    pathes_to_components[tar_name] = root
                                 else:
                                     comp_refs[name_from_path] = component
+                                    pathes_to_components[name_from_path] = root
             except (UnicodeDecodeError, PermissionError):
                 continue
+
+    components_to_add = []
+    for name in pathes_to_components:
+        most_val = ""
+        for sub_name in pathes_to_components:
+            if (sub_name != name and
+                    pathes_to_components[sub_name] in pathes_to_components[name]):
+                if len(sub_name) > len(most_val):
+                    most_val = sub_name
+        if most_val:
+            comp_refs[most_val].components.add(comp_refs[name])
+        else:
+            components_to_add.append(comp_refs[name])
+
+    for comp in components_to_add:
+        bom.components.add(comp)
+
+    for comp in comp_refs:
+        add_vulnerabilites(bom, comp, comp_refs[comp])
+
     add_dependencies(comp_refs, bom, path)
-    #pprint(pathes_to_components)
     my_json_outputter = JsonV1Dot5(bom)
     serialized_json = my_json_outputter.output_as_string(indent=2)
     print(serialized_json)
@@ -325,6 +363,6 @@ if __name__ == "__main__":
         description="Generate a cyclonedx sbom file for gcc 4.1.1 based on its source code"
     )
     parser.add_argument("-i", required=True,
-                            help="Root directory of the project.")
+                       help="Root directory of the project.")
     args = parser.parse_args()
     components = scan_directory(args.i)
