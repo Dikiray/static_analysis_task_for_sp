@@ -7,50 +7,78 @@ def generate_sbom_graph(sbom_file, output_file):
         sbom = json.load(f)
 
     dot = Digraph(comment='SBOM Components Graph')
-    dot.attr(rankdir='LR', size='12,8', nodesep='0.5')
+    dot.attr(rankdir='TB', size='12,8', nodesep='0.5')
     dot.attr('node', shape='box', style='rounded,filled', fillcolor='lightgrey')
     dot.attr('edge', arrowhead='vee', arrowsize='0.5')
 
-    libraries = {}
-    applications = {}
+    all_components = {}
+    parent_components = {}
 
     for component in sbom.get('components', []):
-        if component['type'] == 'library':
-            libraries[component['bom-ref']] = {
-                'name': component['name'],
-                'version': component.get('version', '?')
-            }
-        elif component['type'] == 'application':
-            applications[component['bom-ref']] = {
-                'name': component['name'],
-                'version': component.get('version', '?')
-            }
+        component_id = component['bom-ref']
 
-    for app_id, app_data in applications.items():
-        label = f"{app_data['name']}\n{app_data['version']}"
-        dot.node(app_id, label, shape='ellipse', fillcolor='lightblue')
+        all_components[component_id] = {
+            'name': component['name'],
+            'version': component.get('version', '?'),
+            'type': component['type'],
+            'parent': None,
+            'children': []
+        }
 
-    for lib_id, lib_data in libraries.items():
-        label = f"{lib_data['name']}\nversion:{lib_data['version']}"
-        dot.node(lib_id, label)
+        if 'components' in component:
+            parent_components[component_id] = all_components[component_id]
+
+            for child in component['components']:
+                child_id = child['bom-ref']
+                all_components[child_id] = {
+                    'name': child['name'],
+                    'version': child.get('version', '?'),
+                    'type': child['type'],
+                    'parent': component_id,
+                    'children': []
+                }
+                all_components[component_id]['children'].append(child_id)
+
+    for component_id, component_data in all_components.items():
+        if component_data['parent'] is None:
+            if component_id in parent_components:
+                label = f"{component_data['name']}\n{component_data['version']}"
+                dot.node(component_id, label, shape='folder', fillcolor='lightyellow')
+            else:
+                label = f"{component_data['name']}\n{component_data['version']}"
+                dot.node(component_id, label)
+        else:
+            parent_name = all_components[component_data['parent']]['name']
+            label = f"{parent_name}/{component_data['name']}\n{component_data['version']}"
+            dot.node(component_id, label, shape='box', fillcolor='#f0f0f0')
+
+    for parent_id in parent_components:
+        for child_id in all_components[parent_id]['children']:
+            dot.edge(parent_id, child_id, style='dashed', color='gray')
 
     for dependency in sbom.get('dependencies', []):
         ref = dependency['ref']
         depends_on = dependency.get('dependsOn', [])
 
         for dep in depends_on:
-            if dep in libraries or dep in applications:
+            if dep in all_components:
+                if (ref == all_components.get(dep, {}).get('parent')) or \
+                   (dep == all_components.get(ref, {}).get('parent')):
+                    continue
                 dot.edge(ref, dep)
 
     dot.render(output_file, format='svg', cleanup=True)
+    print(f"Graph saved as {output_file}.svg")
+
+def main():
+    parser = argparse.ArgumentParser(description='Generate SBOM component graph from CycloneDX JSON file')
+    parser.add_argument('-i', help='Path to the CycloneDX JSON SBOM file')
+    parser.add_argument('-o', default='sbom_graph',
+                       help='Output file name (without extension)')
+
+    args = parser.parse_args()
+
+    generate_sbom_graph(args.i, args.o)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Draw the graph of dependencies from given cyclondedx json file"
-    )
-    parser.add_argument("-i", required=True,
-                            help="path to sbom file")
-    parser.add_argument("-o", required=True,
-                            help="name of out file§")
-    args = parser.parse_args()
-    generate_sbom_graph(args.i, args.o)
+    main()
