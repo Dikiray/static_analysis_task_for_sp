@@ -1,0 +1,6 @@
+capstone==5.0.5
+graphviz==0.20.3
+packageurl_python==0.16.0
+pyelftools==0.32
+Requests==2.32.3
+cyclonedx-python-lib==9.1.0
