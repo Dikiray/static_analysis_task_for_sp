@@ -1,3 +1,24 @@
+"""
+SBOM (Software Bill of Materials) Source Generator
+
+This script generates a Software Bill of Materials (SBOM) in CycloneDX format for a project based on its source code.
+It analyzes the source code structure, dependencies, and potential vulnerabilities to create a comprehensive SBOM.
+
+Usage:
+    python sbom-source-generator.py -i <project_root_directory>
+
+Dependencies:
+    - cyclonedx-python-lib
+    - requests
+
+Output:
+    Generates a JSON-formatted SBOM in CycloneDX format, including:
+    - Component metadata
+    - Dependency relationships
+    - Known vulnerabilities (CVEs)
+    - Version information
+"""
+
 import os
 import re
 import stat
