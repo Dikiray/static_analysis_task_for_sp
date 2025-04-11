@@ -1,82 +1,82 @@
 {
   "components": [
     {
-      "bom-ref": "BomRef.2582547798934911.5358435225463787",
+      "bom-ref": "8aa3b813-c758-4252-bcae-99ae48c757e2",
       "name": "GNU Fortran Runtime Library",
       "type": "library",
       "version": "0.2"
     },
     {
-      "bom-ref": "b6d39355-4b32-45a4-ac2c-d6a602b114b6",
+      "bom-ref": "f4ae4be2-e4aa-4bb1-8594-e2094cd1461f",
       "name": "boehm-gc",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "46277d16-27f8-4edd-b25f-46a6cb1bfb52",
+      "bom-ref": "e7dc3d36-a695-43bf-be2d-73e79341755b",
       "name": "cpplib",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "66cb6a0c-2790-41eb-8136-3e2386d6d265",
+      "bom-ref": "eaf7f1b5-31de-4f89-8cf2-7e11f65f9561",
       "name": "fastjar",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "9d90aa9c-a46a-4983-8f1a-0c003a215c99",
+      "bom-ref": "139ce6be-ec5a-48cc-b712-d8ae5721d6fd",
       "name": "fixincludes",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "BomRef.7394729975447342.44628822041859617",
+      "bom-ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060",
       "name": "gcc",
       "type": "library",
       "version": "4.1.1"
     },
     {
-      "bom-ref": "00151bfa-cf7d-46fe-84c8-e8d4dac5af1d",
+      "bom-ref": "006232e1-faa3-4417-9391-1699674bcca1",
       "name": "gnattools",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "09cc5305-0d88-4aba-8241-989fc7854d9d",
+      "bom-ref": "be49d605-b803-4755-9fa0-92588f1a6e13",
       "name": "intl",
       "type": "library",
       "version": "0.12.1"
     },
     {
-      "bom-ref": "4fac3408-4476-4a3e-9107-b4c4307e1319",
+      "bom-ref": "95ae83d9-1229-4387-b3e6-972eadae86f8",
       "name": "libada",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "d54e4d56-94af-4dac-b7a5-289a96909de8",
+      "bom-ref": "2b920fbf-3e9e-4c5b-925a-7b6831679d68",
       "name": "libffi",
       "type": "library",
       "version": "2.1"
     },
     {
-      "bom-ref": "b40a4d9b-27b8-4864-9caa-91ae977b09a9",
+      "bom-ref": "76e05cb2-2ca4-4d6c-8340-62ce9d184340",
       "name": "libiberty",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "15b813fa-46da-4b1e-bc21-1431933a9a5d",
+      "bom-ref": "a0254b8c-b95e-47c1-b338-0813882f60f2",
       "components": [
         {
-          "bom-ref": "BomRef.026269842999877224.5397990893542097",
+          "bom-ref": "b36860c2-eeb1-45e0-8e83-d9fc9f74d584",
           "name": "GNU Classpath",
           "type": "library",
           "version": "0.20-pre"
         },
         {
-          "bom-ref": "cac7940e-4112-4502-b6fe-71f6e259d213",
+          "bom-ref": "05a142ac-ddfd-401f-8081-93efde9ab63b",
           "name": "libltdl",
           "type": "library",
           "version": "1.2"
@@ -87,31 +87,31 @@
       "version": ""
     },
     {
-      "bom-ref": "3e630a27-9deb-4226-bc69-02243acacb9b",
+      "bom-ref": "a41d467f-92ca-4e6f-a951-fa61ba6026ee",
       "name": "libmudflap",
       "type": "library",
       "version": "1.0"
     },
     {
-      "bom-ref": "35be115c-b933-4398-92ab-abc8e2db909f",
+      "bom-ref": "e3db62fc-f788-4c17-a749-57ded0148060",
       "name": "libobjc",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "4c86aa74-866a-4609-8343-67ce91b87434",
+      "bom-ref": "70871a1b-6e04-4e00-9e3e-73144131265a",
       "name": "libssp",
       "type": "library",
       "version": "1.0"
     },
     {
-      "bom-ref": "34cd1265-35f6-4a33-be3c-2149f49d3c05",
+      "bom-ref": "e4b6be76-616f-4cfb-8054-2241246de928",
       "name": "libstdc++-v3",
       "type": "library",
       "version": ""
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "bom-ref": "2e9942de-0842-453e-afb7-03df2dafb9ea",
       "name": "zlib",
       "type": "library",
       "version": "1.2.3"
@@ -119,97 +119,103 @@
   ],
   "dependencies": [
     {
-      "ref": "00151bfa-cf7d-46fe-84c8-e8d4dac5af1d"
+      "ref": "006232e1-faa3-4417-9391-1699674bcca1"
     },
     {
       "dependsOn": [
-        "46277d16-27f8-4edd-b25f-46a6cb1bfb52",
-        "BomRef.7394729975447342.44628822041859617"
+        "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
       ],
-      "ref": "09cc5305-0d88-4aba-8241-989fc7854d9d"
-    },
-    {
-      "ref": "15b813fa-46da-4b1e-bc21-1431933a9a5d"
-    },
-    {
-      "ref": "34cd1265-35f6-4a33-be3c-2149f49d3c05"
-    },
-    {
-      "ref": "35be115c-b933-4398-92ab-abc8e2db909f"
+      "ref": "139ce6be-ec5a-48cc-b712-d8ae5721d6fd"
     },
     {
       "dependsOn": [
-        "15b813fa-46da-4b1e-bc21-1431933a9a5d",
-        "66cb6a0c-2790-41eb-8136-3e2386d6d265",
-        "BomRef.7394729975447342.44628822041859617"
+        "a0254b8c-b95e-47c1-b338-0813882f60f2"
       ],
-      "ref": "BomRef.32551841472687026.8064580410156047"
-    },
-    {
-      "ref": "3e630a27-9deb-4226-bc69-02243acacb9b"
+      "ref": "2b920fbf-3e9e-4c5b-925a-7b6831679d68"
     },
     {
       "dependsOn": [
-        "BomRef.7394729975447342.44628822041859617"
+        "a0254b8c-b95e-47c1-b338-0813882f60f2",
+        "a8af1d98-3328-4dbf-9e38-4bfcd6767060",
+        "eaf7f1b5-31de-4f89-8cf2-7e11f65f9561"
       ],
-      "ref": "46277d16-27f8-4edd-b25f-46a6cb1bfb52"
+      "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
     },
     {
-      "ref": "BomRef.2582547798934911.5358435225463787"
-    },
-    {
-      "ref": "4c86aa74-866a-4609-8343-67ce91b87434"
+      "ref": "70871a1b-6e04-4e00-9e3e-73144131265a"
     },
     {
       "dependsOn": [
-        "00151bfa-cf7d-46fe-84c8-e8d4dac5af1d"
+        "139ce6be-ec5a-48cc-b712-d8ae5721d6fd",
+        "a8af1d98-3328-4dbf-9e38-4bfcd6767060",
+        "e3db62fc-f788-4c17-a749-57ded0148060",
+        "e4b6be76-616f-4cfb-8054-2241246de928",
+        "e7dc3d36-a695-43bf-be2d-73e79341755b",
+        "eaf7f1b5-31de-4f89-8cf2-7e11f65f9561"
       ],
-      "ref": "4fac3408-4476-4a3e-9107-b4c4307e1319"
+      "ref": "76e05cb2-2ca4-4d6c-8340-62ce9d184340"
+    },
+    {
+      "ref": "8aa3b813-c758-4252-bcae-99ae48c757e2"
     },
     {
       "dependsOn": [
-        "15b813fa-46da-4b1e-bc21-1431933a9a5d"
+        "006232e1-faa3-4417-9391-1699674bcca1"
       ],
-      "ref": "66cb6a0c-2790-41eb-8136-3e2386d6d265"
+      "ref": "95ae83d9-1229-4387-b3e6-972eadae86f8"
+    },
+    {
+      "ref": "a0254b8c-b95e-47c1-b338-0813882f60f2"
+    },
+    {
+      "ref": "a41d467f-92ca-4e6f-a951-fa61ba6026ee"
+    },
+    {
+      "ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
     },
     {
       "dependsOn": [
-        "BomRef.7394729975447342.44628822041859617"
+        "a8af1d98-3328-4dbf-9e38-4bfcd6767060",
+        "e7dc3d36-a695-43bf-be2d-73e79341755b"
       ],
-      "ref": "9d90aa9c-a46a-4983-8f1a-0c003a215c99"
+      "ref": "be49d605-b803-4755-9fa0-92588f1a6e13"
+    },
+    {
+      "ref": "e3db62fc-f788-4c17-a749-57ded0148060"
+    },
+    {
+      "ref": "e4b6be76-616f-4cfb-8054-2241246de928"
     },
     {
       "dependsOn": [
-        "34cd1265-35f6-4a33-be3c-2149f49d3c05",
-        "35be115c-b933-4398-92ab-abc8e2db909f",
-        "46277d16-27f8-4edd-b25f-46a6cb1bfb52",
-        "66cb6a0c-2790-41eb-8136-3e2386d6d265",
-        "9d90aa9c-a46a-4983-8f1a-0c003a215c99",
-        "BomRef.7394729975447342.44628822041859617"
+        "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
       ],
-      "ref": "b40a4d9b-27b8-4864-9caa-91ae977b09a9"
+      "ref": "e7dc3d36-a695-43bf-be2d-73e79341755b"
     },
     {
       "dependsOn": [
-        "15b813fa-46da-4b1e-bc21-1431933a9a5d"
+        "a0254b8c-b95e-47c1-b338-0813882f60f2"
       ],
-      "ref": "b6d39355-4b32-45a4-ac2c-d6a602b114b6"
-    },
-    {
-      "ref": "BomRef.7394729975447342.44628822041859617"
+      "ref": "eaf7f1b5-31de-4f89-8cf2-7e11f65f9561"
     },
     {
       "dependsOn": [
-        "15b813fa-46da-4b1e-bc21-1431933a9a5d"
+        "a0254b8c-b95e-47c1-b338-0813882f60f2"
       ],
-      "ref": "d54e4d56-94af-4dac-b7a5-289a96909de8"
+      "ref": "f4ae4be2-e4aa-4bb1-8594-e2094cd1461f"
     }
   ],
   "metadata": {
-    "timestamp": "2025-04-01T20:51:35.130422+00:00",
+    "timestamp": "2025-04-11T19:20:14.037225+00:00",
     "tools": {
       "components": [
         {
+          "bom-ref": "10e2dfc2-107c-4866-87e7-7732f8f4aaa5",
+          "name": "gcc FOLDER",
+          "type": "application"
+        },
+        {
+          "bom-ref": "ad8eb892-737b-4c00-9898-66786436108e",
           "name": "sbom-generator",
           "type": "application"
         },
@@ -264,11 +270,16 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:7e753335-06fd-4107-882b-206387fb6e83",
+  "serialNumber": "urn:uuid:729cad4c-d289-4a1c-afae-75b6e6955bd8",
   "version": 1,
   "vulnerabilities": [
     {
-      "bom-ref": "BomRef.7394729975447342.44628822041859617",
+      "affects": [
+        {
+          "ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
+        }
+      ],
+      "bom-ref": "42e73745-23b8-4b09-bb30-574b09430e82",
       "id": "CVE-2002-2439",
       "ratings": [
         {
@@ -282,7 +293,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2002-2439"
     },
     {
-      "bom-ref": "BomRef.026269842999877224.5397990893542097",
+      "affects": [
+        {
+          "ref": "b36860c2-eeb1-45e0-8e83-d9fc9f74d584"
+        }
+      ],
+      "bom-ref": "a053c53c-71c7-40e5-8c22-1e3e158aa9a0",
       "id": "CVE-2008-5659",
       "ratings": [
         {
@@ -296,7 +312,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2008-5659"
     },
     {
-      "bom-ref": "BomRef.2582547798934911.5358435225463787",
+      "affects": [
+        {
+          "ref": "8aa3b813-c758-4252-bcae-99ae48c757e2"
+        }
+      ],
+      "bom-ref": "d2b08d3a-e180-488c-8abb-2f50ec623e8e",
       "id": "CVE-2014-5044",
       "ratings": [
         {
@@ -311,7 +332,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2014-5044"
     },
     {
-      "bom-ref": "BomRef.7394729975447342.44628822041859617",
+      "affects": [
+        {
+          "ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
+        }
+      ],
+      "bom-ref": "3e4420fb-2198-47dd-885d-a718fc2e95f5",
       "id": "CVE-2015-5276",
       "ratings": [
         {
@@ -325,7 +351,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2015-5276"
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "affects": [
+        {
+          "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
+        }
+      ],
+      "bom-ref": "3bafc28c-dd22-448f-aefd-35ec65299092",
       "id": "CVE-2016-9840",
       "ratings": [
         {
@@ -339,7 +370,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9840"
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "affects": [
+        {
+          "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
+        }
+      ],
+      "bom-ref": "0d397d54-48eb-40ee-b288-7c4d767cded8",
       "id": "CVE-2016-9841",
       "ratings": [
         {
@@ -353,7 +389,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9841"
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "affects": [
+        {
+          "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
+        }
+      ],
+      "bom-ref": "9205103b-50e9-482b-bee1-17acc98de06d",
       "id": "CVE-2016-9843",
       "ratings": [
         {
@@ -367,7 +408,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2016-9843"
     },
     {
-      "bom-ref": "BomRef.7394729975447342.44628822041859617",
+      "affects": [
+        {
+          "ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
+        }
+      ],
+      "bom-ref": "ada54856-4a66-41fd-9168-b942bbe5f613",
       "id": "CVE-2018-12886",
       "ratings": [
         {
@@ -382,7 +428,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-12886"
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "affects": [
+        {
+          "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
+        }
+      ],
+      "bom-ref": "5d34a514-04a2-44cd-8b44-7db87fc4616c",
       "id": "CVE-2018-25032",
       "ratings": [
         {
@@ -396,7 +447,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2018-25032"
     },
     {
-      "bom-ref": "BomRef.7394729975447342.44628822041859617",
+      "affects": [
+        {
+          "ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
+        }
+      ],
+      "bom-ref": "050d8d5a-a4ed-493d-937d-f5b67f8cd721",
       "id": "CVE-2019-15847",
       "ratings": [
         {
@@ -410,7 +466,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2019-15847"
     },
     {
-      "bom-ref": "BomRef.7394729975447342.44628822041859617",
+      "affects": [
+        {
+          "ref": "a8af1d98-3328-4dbf-9e38-4bfcd6767060"
+        }
+      ],
+      "bom-ref": "44fa804b-b170-4053-b213-5a5c95fc20ae",
       "id": "CVE-2021-37322",
       "ratings": [
         {
@@ -424,7 +485,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2021-37322"
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "affects": [
+        {
+          "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
+        }
+      ],
+      "bom-ref": "7aba94e1-3976-4e35-9ccf-c111484f2e9c",
       "id": "CVE-2022-37434",
       "ratings": [
         {
@@ -437,7 +503,12 @@
       "source": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434"
     },
     {
-      "bom-ref": "BomRef.32551841472687026.8064580410156047",
+      "affects": [
+        {
+          "ref": "2e9942de-0842-453e-afb7-03df2dafb9ea"
+        }
+      ],
+      "bom-ref": "1f61eeeb-c73f-489e-b10f-e1c17aef1817",
       "id": "CVE-2023-45853",
       "ratings": [
         {

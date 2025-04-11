@@ -6,25 +6,20 @@ import argparse
 import time
 from uuid import uuid4
 from pprint import pprint
-from packageurl import PackageURL
 from collections import defaultdict
 
 from cyclonedx.builder.this import this_component as cdx_lib_component
-from cyclonedx.exception import MissingOptionalDependencyException
-from cyclonedx.factory.license import LicenseFactory
-from cyclonedx.model import XsUri
+
 from cyclonedx.model.bom import Bom
 from cyclonedx.model.component import Component, ComponentType
-from cyclonedx.model.contact import OrganizationalEntity
-from cyclonedx.output import make_outputter
 from cyclonedx.output.json import JsonV1Dot5
-from cyclonedx.schema import OutputFormat, SchemaVersion
-from cyclonedx.validation import make_schemabased_validator
+from cyclonedx.schema import SchemaVersion
 from cyclonedx.validation.json import JsonStrictValidator
 from cyclonedx.model.vulnerability import (
     Vulnerability,
     VulnerabilityRating,
-    VulnerabilityScoreSource
+    VulnerabilityScoreSource,
+    BomTarget,
 )
 
 
@@ -228,10 +223,36 @@ def search_nvd(package_name, version):
             return cves
     return []
 
-
-def add_library_to_bom(bom, package_name, name_from_path, ver_parsed):
+def add_metadata_to_bom(bom, path):
     """
-    Add a library component to the BOM with its vulnerabilities.
+    Add metadata components to the Bill of Materials (BOM).
+    This includes the CycloneDX library component, the SBOM generator tool,
+    and the target application being analyzed.
+
+    Args:
+        bom (Bom): The Bill of Materials object to add metadata to
+        path (str): Path to the target application being analyzed
+    """
+    
+    bom.metadata.tools.components.add(cdx_lib_component())
+    bom_ref = str(uuid4())
+    component = Component(
+        name='sbom-generator',
+        type=ComponentType.APPLICATION,
+        bom_ref=bom_ref,
+    )
+    bom.metadata.tools.components.add(component)
+    bom_ref = str(uuid4())
+    component = Component(
+        name="{} {}".format(os.path.basename(os.path.normpath(path)), "FOLDER"),
+        type=ComponentType.APPLICATION,
+        bom_ref=bom_ref,
+    )
+    bom.metadata.tools.components.add(component)
+
+def make_component(package_name, name_from_path, ver_parsed):
+    """
+    Create a library component for the BOM.
 
     Args:
         bom (Bom): The Bill of Materials object
@@ -266,11 +287,13 @@ def add_vulnerabilites(bom, package_name, component):
         rating = []
         for scr in vuln["SCORES"]:
             rating.append(VulnerabilityRating(score=scr[1], method=scr[0]))
+        bom_ref = str(uuid4())
         vulnerability = Vulnerability(
-            bom_ref=component.bom_ref,
+            bom_ref=bom_ref,
             id=vuln["CVE_ID"],
             source=vuln["URL"],
-            ratings=set(rating)
+            ratings=set(rating),
+            affects=[BomTarget(ref=component.bom_ref)]
         )
         bom.vulnerabilities.add(vulnerability)
 
@@ -282,12 +305,9 @@ def scan_directory(path):
     Args:
         path (str): Path to the directory to scan
     """
+
     bom = Bom()
-    bom.metadata.tools.components.add(cdx_lib_component())
-    bom.metadata.tools.components.add(Component(
-        name='sbom-generator',
-        type=ComponentType.APPLICATION,
-    ))
+    add_metadata_to_bom(bom, path)
 
     if not os.path.exists(path):
         print(f"Path {path} does not exist.")
@@ -320,8 +340,8 @@ def scan_directory(path):
                                 name_from_path = file_path.split('/')[-2]
                                 if not ver_parsed:
                                     ver_parsed = try_to_find_version(root, name_from_path)
-                                component = add_library_to_bom(
-                                    bom, package_name, name_from_path, ver_parsed
+                                component = make_component(
+                                    package_name, name_from_path, ver_parsed
                                 )
                                 if tar_name and package_name != "package-unused":
                                     comp_refs[tar_name] = component
@@ -360,9 +380,10 @@ def scan_directory(path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Generate a cyclonedx sbom file for gcc 4.1.1 based on its source code"
+        description="Generate a Software Bill of Materials (SBOM) in CycloneDX format for a project based on its source code. "
+                   "This tool analyzes the source code structure, dependencies, and potential vulnerabilities to create a comprehensive SBOM."
     )
-    parser.add_argument("-i", required=True,
-                       help="Root directory of the project.")
+    parser.add_argument("-i", "--input", required=True,
+                       help="Root directory of the project to analyze")
     args = parser.parse_args()
-    components = scan_directory(args.i)
+    components = scan_directory(args.input)
