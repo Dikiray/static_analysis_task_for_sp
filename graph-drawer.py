@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Generate a graph visualization of Software Bill of Materials (SBOM) components.
 
